@@ -9,7 +9,7 @@ if (process.env.JAWSDB_URL) {
   host: 'localhost',
   user: 'root',
   password: 'All4toomb',
-  database: 'burgers_db'
+  database: 'johnhughesburgers_db'
 });
 
 };
