@@ -1,12 +1,10 @@
 $('#burger-form').on('submit', function(event) {
     event.preventDefault();
-  
     const burgerData = {
       burger_name: $('[name=burger-name]')
         .val()
         .trim()
-    };
-  
+    }; 
     $.ajax({
       url: '/api/burgers',
       method: 'POST',
@@ -16,10 +14,8 @@ $('#burger-form').on('submit', function(event) {
       location.reload();
     });
   });
-  
   $('.devourBurger').on('click', function() {
     const burgerId = $(this).attr('data-burgerid');
-  
     $.ajax({
       url: `/api/burgers/${burgerId}`,
       method: 'PUT',
@@ -31,10 +27,8 @@ $('#burger-form').on('submit', function(event) {
       location.reload();
     });
   });
-  
   $('.deleteBurger').on('click', function() {
     const burgerId = $(this).attr('data-burgerid');
-  
     $.ajax({
       url: `/api/burgers/${burgerId}`,
       method: 'DELETE'

@@ -1,7 +1,5 @@
 const router = require('express').Router();
-
 const { getBurgers } = require('../../controllers/burger_controller');
-
 router.get('/', (req, res) => {
   getBurgers()
     .then(burgerdata => {
@@ -11,5 +9,4 @@ router.get('/', (req, res) => {
       res.status(500).end();
     });
 });
-
 module.exports = router;

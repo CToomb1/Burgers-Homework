@@ -1,7 +1,5 @@
 const mysql = require('mysql');
-
 require('dotenv').config();
-
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSBS_URL);
 } else {
@@ -11,7 +9,5 @@ if (process.env.JAWSDB_URL) {
   password: 'All4toomb',
   database: 'johnhughesburgers_db'
 });
-
 };
-
 module.exports = connection;
